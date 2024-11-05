@@ -1,9 +1,19 @@
-
+import { useEffect, useState } from "react";
+import Loader from "../../Components/Loader/Loader";
 
 const Login = () => {
-  return (
-    <div className='login'>Login</div>
-  )
-}
+  const [loading, setLoading] = useState(true);
 
-export default Login
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="signup">
+      {loading ? <Loader /> : <div className="">Login</div>}
+    </div>
+  );
+};
+
+export default Login;

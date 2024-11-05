@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const menu = () => {
+  const menu = (prev) => {
     setOpen((prev) => !prev);
   };
 
@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="hidden lg:flex md:hidden text-center w-[15%]">
         <Buttons
           text={`Try it Now ${"->"}`}
-          className={" bg-black text-white w-[60%] "}
+          className={" bg-black text-white w-[60%] hover:scale-105 transition-all duration-150 "}
           onClick={reDirect}
         />
       </div>
