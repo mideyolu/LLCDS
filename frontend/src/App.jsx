@@ -4,7 +4,7 @@ import HomePage from "./routes/HomePage/HomePage";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Signup from "./routes/Signup/Signup";
 import Login from "./routes/Login/Login";
-import Onboarding from "./Components/Onboarding/Onboarding";
+import Onboarding from "./routes/Onboarding/Onboarding";
 
 const App = () => {
   const location = useLocation();
@@ -21,7 +21,7 @@ const App = () => {
       </Routes>
 
       <div className="div">
-        {!hideNavbarRoutes.includes(location.pathname) && <Navbar />}
+        {!hideNavbarRoutes.includes(location.pathname) && <Footer />}
       </div>
     </div>
   );

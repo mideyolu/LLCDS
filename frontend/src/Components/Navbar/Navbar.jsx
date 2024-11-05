@@ -20,9 +20,11 @@ const Navbar = () => {
     navigate("/onboarding");
   };
 
+  const text =<FaArrowRight/>
+
   return (
     <div className="font-semibold fixed top-0 w-full flex items-center justify-around py-[0.7rem] md:py-[0.7rem] px-[2rem]">
-      <div className=" font-bold flex items-center gap-2">
+      <div className=" text-[1rem] font-bold flex items-center gap-2">
         <img
           src="/logo.jpg"
           alt="Logo.jpg"
@@ -33,7 +35,7 @@ const Navbar = () => {
 
       <div className="hidden lg:flex md:hidden text-center w-[15%]">
         <Buttons
-          text={`Try it Now ${"->"}`}
+          text={`Try it Now ${''}`}
           className={" bg-black text-white w-[60%] hover:scale-105 transition-all duration-150 "}
           onClick={reDirect}
         />

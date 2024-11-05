@@ -3,7 +3,7 @@ import { IoMdPersonAdd } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Loader from "../Loader/Loader";
+import Loader from "../../Components/Loader/Loader";
 
 const Onboarding = ({
   title = "Get Started",
@@ -81,7 +81,7 @@ const Onboarding = ({
           </div>
 
           {/* Right Section */}
-          <div className="right flex-1 h-full bg-blue-800 p-[4rem]">
+          <div className="right flex-1 h-full bg-blue-800 p-[4rem] hidden md:block">
             <div className="h-[95%] w-full bg-cover bg-center flex items-center">
               <img
                 src={imageSrc}

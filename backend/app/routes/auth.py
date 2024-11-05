@@ -6,7 +6,7 @@ from app.crud.auth import create_provider, get_provider_by_username, get_provide
 from app.auth.auth_utils import create_access_token
 from hashlib import sha256
 from datetime import timedelta
-from app.config import settings  # Import your settings here
+from app.config import settings
 
 router = APIRouter()
 

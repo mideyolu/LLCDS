@@ -15,7 +15,7 @@ const HomePage = () => {
       <div className="mt-[7.5rem] mb-[10rem] md:mb-[13rem] min-h-[100%] flex items-center justify-between">
         <div className="font-bold">
           <div className="flex items-start flex-col">
-            <h3 className="mb-[1rem] text-[2.3rem] md:text-[3rem]">
+            <h3 className="mb-[1rem] text-[2.3rem] md:text-[2.8rem]">
               Seamless AI-Powered
               <span className="text-blue-800 mb-[1rem] block">Lung Cancer</span>
               Detection System!{" "}
@@ -32,7 +32,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className=" hidden md:flex w-[50%]  items-center justify-center">
+        <div className=" hidden md:hidden lg:flex w-[50%]  items-center justify-center">
           <img
             src="/home.png"
             alt="Home.jpg"
