@@ -43,3 +43,15 @@ def create_diagnosis(db: Session, diagnosis_data: dict) -> Diagnosis:
     # Refresh the instance to reflect the state of the newly created record
     db.refresh(db_diagnosis)
     return db_diagnosis  # Return the created Diagnosis object
+
+def get_all_patients(db: Session):
+    """
+    Fetch all patient records from the database.
+
+    Args:
+        db (Session): Database session.
+
+    Returns:
+        List[Patient]: A list of all patients in the database.
+    """
+    return db.query(Patient).all()
