@@ -19,7 +19,7 @@ const Login = () => {
         localStorage.setItem("token", response.access_token);
 
         // Display success toast
-        toast.success("Login successful! Redirecting to dashboard...");
+        toast.success("Login successful!");
         // Redirect to login after a delay
         setTimeout(() => navigate("/dashboard"), 2000);
       }

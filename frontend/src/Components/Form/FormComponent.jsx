@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { validateEmail, validatePassword } from "../../api/api"; // Make sure this path is correct
+import { validateEmail, validatePassword } from "../../api/api";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -75,15 +76,32 @@ const FormComponent = ({ onSubmit, isLogin, imageUrl }) => {
               className="border p-2 w-full md:w-[60%] rounded"
             />
           </div>
+          <div className="">
+            {isLogin ? (
+              <Link
+                className=" relative md:absolute md:top-[70%] md:right-[40%] text-[0.7rem] text-gray-500"
+                to={"/signup"}
+              >
+                Don't Have An Account?
+              </Link>
+            ) : (
+              <Link
+                className="text-[0.7rem] text-gray-500 relative md:absolute md:top-[70%] md:right-[40%] "
+                to={"/login"}
+              >
+                Already Have An Account?
+              </Link>
+            )}
+          </div>
           <button
             type="submit"
-            className="bg-blue-600 text-white py-2 px-4 rounded w-full md:w-[60%]"
+            className="bg-blue-600 text-white py-2 px-4 rounded w-full md:w-[30%] md:flex md:items-center md:justify-center md:content-center md:ml-[3rem] md:mr-[3rem]"
           >
             {isLogin ? "Login" : "Sign Up"}
           </button>
         </form>
       </div>
-      <div className="hidden md:flex md:w-1/2 bg-blue-800 items-center justify-center">
+      <div className="hidden md:flex w-2/6 bg-blue-800 items-center justify-center">
         <img
           src={imageUrl}
           alt="Background"
