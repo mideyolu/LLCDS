@@ -39,7 +39,7 @@ const FormComponent = ({ onSubmit, isLogin, imageUrl }) => {
 
   return (
     <div className="flex h-screen">
-      <div className="flex flex-col justify-center w-[60%] max-w-md p-10 mx-auto ">
+      <div className="flex flex-col justify-center w-[80%] max-w-md p-10 mx-auto ">
         <h2 className="text-2xl font-bold mb-6 text-center underline-offset-8 underline">
           {isLogin ? "Login" : "Sign Up"}
         </h2>
